@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-//  "CurrentWeather"ın görevi JSON verisini çektiğimizde gelen verilerin tutulmasını sağlamak. Fakat "CurrentWeatherModel" ise JSON verilerinden çektiğimiz CurrentWeather nesnesini istediğimiz gibi kullanmamızı sağlayan yapıdır. Çünkü mesela humidity değerini  JSON'da double olarak tanımlandığı için CurrentWeather yapısında yine double olarak tanımladık. Bu bir zorunluluk. Fakat ben bunu string olarak kullanmak istediğim için veya bu tarz farklı işlemler yapmak istediğim için ayrı bir model oluşturdum.
+//  "CurrentWeatherModel"ın görevi JSON verisini çektiğimizde gelen verilerin tutulmasını sağlamak. Fakat "CurrentWeatherEntity" ise JSON verilerinden çektiğimiz "CurrentWeatherModel" nesnesini istediğimiz gibi kullanmamızı sağlayan yapıdır. Çünkü mesela humidity değerini  JSON'da double olarak tanımlandığı için CurrentWeather yapısında yine double olarak tanımladık. Bu bir zorunluluk. Fakat ben bunu string olarak kullanmak istediğim için veya bu tarz farklı işlemler yapmak istediğim için ayrı bir model oluşturdum. 
 
 struct CurrentWeatherEntity {
     

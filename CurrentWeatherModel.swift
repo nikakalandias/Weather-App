@@ -16,7 +16,7 @@ struct CurrentWeatherModel {
     let icon : String // JSON'dan gelen Icon'un adı
 }
 
-//  JSON'dan yani veriyi çekeceğimiz yerden gelen veriler burada tutuluyor. Çekeceğimiz verideki değerler ile üstteki değerler uyuşmak zorunda. Değişken adları aynı olmalı, tipleri aynı olmalı.
+//  JSON'dan yani veriyi çekeceğimiz yerden gelen veriler burada tutuluyor. Çekeceğimiz verideki değerler ile üstteki değerler uyuşmak zorunda. Değişken adları aynı olmalı, tipleri aynı olmalı. İşlenmemiş veriyi burada tutuyoruz.
 
 extension CurrentWeatherModel {
     
