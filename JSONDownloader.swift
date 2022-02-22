@@ -21,8 +21,10 @@ class JSONDownloader {
     }
     
     typealias JSON = [String: AnyObject]
+    typealias JSONDownloaderCompletionH = (JSON?, OpenWeatherMapError?) -> Void
     
-    func jsonTask(with request : URLRequest , completionHandler completion : @escaping (JSON?, OpenWeatherMapError?) -> Void) -> URLSessionDataTask {
+    func jsonTask(with request : URLRequest , completionHandler completion : @escaping JSONDownloaderCompletionH ) -> URLSessionDataTask {
+        
         let task = session.dataTask(with: request) { data, response, error in
             guard let httpResponse = response as? HTTPURLResponse else {
                 completion(nil, .RequestError)

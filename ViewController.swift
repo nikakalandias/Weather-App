@@ -5,6 +5,8 @@
 //  Created by Nika Kalandia on 14.02.2022.
 //
 
+//  Object-Oriented Programming yapısını kullanarak yazmış olduğumuz çoğu fonksiyonu tekrardan kullanılabilir hale getirdik. Normalde veriyi sadece ViewController sınıfı altında çekip işleyebilirdik ve istediğimiz sonucu elde ederdik. Ancak bu tek seferlik olurdu ve 
+
 import UIKit
 
 class ViewController: UIViewController {
@@ -12,16 +14,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var labelVC: UILabel!
     
     let apiKey : String = "1bbe135666fa7457d66b782089e51366"
-    let latitude : Double = 33.44
-    let longitude : Double = -94.04
-    
 
     override func viewDidLoad() {
         
         super.viewDidLoad()
         view.backgroundColor = UIColor(patternImage: UIImage(named: "weatherbackground.png")!)
-        
-        let URL = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=\(latitude)&lon=\(longitude)&exclude=hourly,daily&appid=\(apiKey)")
         
         let weather = CurrentWeatherModel(temperature: 1.3, main: "Cloud", precipitation: 3.5, humidity: 6.3)
         let viewModel = CurrentWeatherEntity(data: weather)
